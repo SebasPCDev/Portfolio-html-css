@@ -84,6 +84,7 @@ body{
     display:flex;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s linear;
 }
 
 .aboutme .texto p{
@@ -102,11 +103,44 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
     height: 400px;
     width: auto;
-    transition: transform 0.3s linear;
+    
 }
 
-.aboutme #photoP:hover{
+.aboutme .profilePhoto:hover{
     transform: scale(1.1);
+}
+
+.profilePhoto:hover + .socials,
+    .socials:hover {
+      opacity: 1;
+      transform: translate(0%, 0%);
+    }
+
+.aboutme .socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    padding-right: 20px;
+    transform: translate(-60%, 0%);
+    transition: opacity 0.1s ease-in-out, transform 0.5s ease;
+}
+
+.aboutme #linkedin{
+    height: 30px;
+    width: auto;
+    margin: 5px 40px 5px;
+}
+
+.aboutme #github{
+    height: 30px;
+    width: auto;
+    margin: 5px 40px 5px;
+}
+.aboutme #instagram{
+    height: 30px;
+    width: auto;
+    margin: 5px 40px 5px;
 }
 
 .estudios{
@@ -237,6 +271,36 @@ body{
         padding: 0px 0px 0px;
     }
 
+    .aboutme .socials{
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        padding-right: 0px;
+        transform: translate(0%, -220%);
+        transition: opacity 0.1s ease-in-out, transform 0.5s ease;
+    }
+    .profilePhoto:hover + .socials,
+    .socials:hover {
+      opacity: 1;
+      transform: translate(0%, 0%);
+    }
+    .aboutme #linkedin{
+        height: 30px;
+        width: auto;
+        margin: 5px 10px 5px;
+    }
+    
+    .aboutme #github{
+        height: 30px;
+        width: auto;
+        margin: 5px 10px 5px;
+    }
+    .aboutme #instagram{
+        height: 30px;
+        width: auto;
+        margin: 5px 10px 5px;
+    }
+
     .estudios .content-estudios{
         display: flex;
         flex-direction: column;
@@ -285,3 +349,4 @@ body{
         padding: 0px 30px 0px;
     }
 }
+
